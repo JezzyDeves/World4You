@@ -9,6 +9,7 @@ namespace API.Data
 {
     public class Place
     {
+        public Guid UserID { get; set; }
         [Key]
         public int ID { get; set; }
         [Required]
