@@ -76,10 +76,7 @@ namespace API.Services
         //DELETE A PLACE
         public bool DeleteAPlace(int id)
         {
-            var placeEntity =
-                    _context
-                        .Places
-                        .Single(p => p.ID == id);
+            var placeEntity =_context.Places.Single(p => p.ID == id);
 
             _context.Places.Remove(placeEntity);
 
