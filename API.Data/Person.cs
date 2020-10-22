@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,5 +19,7 @@ namespace API.Data
         public int Age { get; set; }
         public string Occupation { get; set; }
         //Add Location
+        [ForeignKey(nameof(Place))]
+        public virtual Place Place { get; set; }
     }
 }
