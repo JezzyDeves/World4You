@@ -34,7 +34,7 @@ namespace API.Data
         }
 
         //Add DBSets for your data below here!
-
+        DbSet<Artifact> Artifacts;
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
