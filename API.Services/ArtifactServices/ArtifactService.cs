@@ -33,7 +33,7 @@ namespace API.Services.ArtifactServices
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<ArtifactListItem> GetNotes()
+        public IEnumerable<ArtifactListItem> GetArtifacts()
         {
             using (var ctx = new ApplicationDbContext())
             {
