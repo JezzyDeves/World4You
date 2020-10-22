@@ -1,4 +1,5 @@
-﻿using API.Services.ArtifactServices;
+﻿using API.Models.Models.Artifacts;
+using API.Services.ArtifactServices;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,18 @@ namespace World4YouAPI.Controllers
             ArtifactService service = CreateArtifactService();
             var artifacts = service.GetArtifacts();
             return Ok(artifacts);
+        }
+        public IHttpActionResult Post(CreateArtifact artifact)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateArtifactService();
+
+            if (!service.ArtifactCreate(artifact))
+                return InternalServerError();
+
+            return Ok();
         }
     }
 }
