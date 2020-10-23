@@ -85,12 +85,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models.Persons\PersonCreate.cs" />
+    <Compile Include="Models.Persons\PersonDetail.cs" />
+    <Compile Include="Models.Persons\PersonEdit.cs" />
     <Compile Include="Models.Persons\PersonListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API.Data\API.Data.csproj">
+      <Project>{2E4FAB6C-9FE5-4681-9BE0-9C71977F436D}</Project>
+      <Name>API.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
