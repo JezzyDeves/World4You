@@ -12,6 +12,11 @@ namespace API.Services
     public class PlaceServices
     {
         private readonly ApplicationDbContext _context = new ApplicationDbContext();
+        private readonly Guid _userID;
+        public PlaceServices(Guid userID)
+        {
+            _userID = userID;
+        }
         
         //POST
         public bool CreatePlace(PlaceCreate model)
@@ -77,7 +82,6 @@ namespace API.Services
         public bool DeleteAPlace(int id)
         {
             var placeEntity =_context.Places.Single(p => p.ID == id);
-
             _context.Places.Remove(placeEntity);
 
             return _context.SaveChanges() == 1;

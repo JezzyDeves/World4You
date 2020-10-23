@@ -18,7 +18,7 @@ namespace World4YouAPI.Controllers
         private PlaceServices CreatePlaceService()
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
-            var placeService = new PlaceServices();
+            var placeService = new PlaceServices(userID);
             return placeService;
         }
 
@@ -28,6 +28,7 @@ namespace World4YouAPI.Controllers
             var places = service.ShowAllPlaces();
             return Ok(places);
         }
+        
         public IHttpActionResult Post(PlaceCreate place)
         {
             if (!ModelState.IsValid)
