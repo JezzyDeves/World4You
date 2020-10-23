@@ -11,16 +11,16 @@ namespace API.Models
 {
     public class PersonCreate
     {
-        [Key]
+        //[Key]
         public int ID { get; set; }
-        [Required]
+        //[Required]
         public string Name { get; set; }
         public string Title { get; set; }
-        [Required]
+        //[Required]
         public int Age { get; set; }
         public string Occupation { get; set; }
         //Add Location
-        [ForeignKey(nameof(Place))]
+        //[ForeignKey(nameof(Place))]
         public virtual Place Place { get; set; }
     }
 }
