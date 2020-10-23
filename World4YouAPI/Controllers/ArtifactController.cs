@@ -26,6 +26,12 @@ namespace World4YouAPI.Controllers
             var artifacts = service.GetArtifacts();
             return Ok(artifacts);
         }
+        public IHttpActionResult Get(int id)
+        {
+            ArtifactService service = CreateArtifactService();
+            var artifact = service.GetArtifactByID(id);
+            return Ok(artifact);
+        }
         public IHttpActionResult Post(CreateArtifact artifact)
         {
             if (!ModelState.IsValid)

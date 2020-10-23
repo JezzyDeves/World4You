@@ -53,5 +53,24 @@ namespace API.Services.ArtifactServices
                 return query.ToArray();
             }
         }
+        public ArtifactDetail GetArtifactByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Artifacts
+                    .Single(e => e.ID == id && e.OwnerID == _userID);
+                return
+                    new ArtifactDetail
+                    {
+                        Name = entity.Name,
+                        Age = entity.Age,
+                        Power = entity.Power,
+                        Description = entity.Description,
+                        Location = entity.Place
+                    };
+            }
+        }
     }
 }
