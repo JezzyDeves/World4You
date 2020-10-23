@@ -84,8 +84,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="PlaceModels\PlaceDetail.cs" />
+    <Compile Include="PlaceModels\PlaceCreate.cs" />
+
     <Compile Include="Models.Artifacts\ArtifactListItem.cs" />
     <Compile Include="Models.Artifacts\CreateArtifact.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

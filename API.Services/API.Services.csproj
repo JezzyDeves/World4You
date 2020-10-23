@@ -84,7 +84,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="PlaceServices\PlaceServices.cs" />
+
     <Compile Include="ArtifactServices\ArtifactService.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,11 +97,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\API.Data\API.Data.csproj">
+
+      <Project>{2E4FAB6C-9FE5-4681-9BE0-9C71977F436D}</Project>
+      <Name>API.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\API.Models\API.Models.csproj">
+      <Project>{6DE1448C-E88B-445E-ACC5-DBEBF9F41401}</Project>
+
       <Project>{2e4fab6c-9fe5-4681-9be0-9c71977f436d}</Project>
       <Name>API.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\API.Models\API.Models.csproj">
       <Project>{6de1448c-e88b-445e-acc5-dbebf9f41401}</Project>
+
       <Name>API.Models</Name>
     </ProjectReference>
   </ItemGroup>
