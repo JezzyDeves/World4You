@@ -9,9 +9,7 @@ namespace API.Models.PlaceModels
 {
     public class PlaceCreate
     {
-        [Required]
         public string Name { get; set; }
-        [Required]
         public string Position { get; set; }
         public int Elevation { get; set; }
         public string Climate { get; set; }
