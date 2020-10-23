@@ -84,13 +84,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="PlaceModels\PlaceDetail.cs" />
     <Compile Include="PlaceModels\PlaceCreate.cs" />
+
+    <Compile Include="Models.Artifacts\ArtifactListItem.cs" />
+    <Compile Include="Models.Artifacts\CreateArtifact.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
