@@ -83,11 +83,18 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>
     <Compile Include="Models.Persons\PersonCreate.cs" />
     <Compile Include="Models.Persons\PersonDetail.cs" />
     <Compile Include="Models.Persons\PersonEdit.cs" />
     <Compile Include="Models.Persons\PersonListItem.cs" />
+    <Compile Include="Models.Artifacts\ArtifactDetail.cs" />
+
+    <Compile Include="PlaceModels\PlaceDetail.cs" />
+    <Compile Include="PlaceModels\PlaceCreate.cs" />
+
+    <Compile Include="Models.Artifacts\ArtifactListItem.cs" />
+    <Compile Include="Models.Artifacts\CreateArtifact.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -36,6 +36,11 @@ namespace API.Data
         //Add DBSets for your data below here!
         public DbSet<Person> Persons { get; set; }            
 
+        public DbSet<Place> Places { get; set; }
+
+        public DbSet<Artifact> Artifacts { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
