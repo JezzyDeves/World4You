@@ -10,9 +10,7 @@ namespace API.Models.Models.Animals
 {
     public class AnimalDetail
     {
-        
         public int ID { get; set; }
-        
         public string Name { get; set; }
         public string Species { get; set; }
         public int Population { get; set; }
