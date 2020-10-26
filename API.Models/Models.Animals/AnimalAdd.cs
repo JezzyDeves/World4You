@@ -1,24 +1,19 @@
-﻿using System;
+﻿using API.Data;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API.Data
+namespace API.Models.Models.Animals
 {
-    public class Animal
+    public class AnimalAdd
     {
-        
-        [Key]
         public int ID { get; set; }
-        [Required]
         public string Name { get; set; }
         public string Species { get; set; }
         public int Population { get; set; }
-
-        public Guid OwnerID { get; set; }
         
         [ForeignKey(nameof(Place))]
         public int PlaceID { get; set; }

@@ -40,6 +40,8 @@ namespace API.Data
 
         public DbSet<Artifact> Artifacts { get; set; }
 
+        public DbSet<Animal> Animals { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
