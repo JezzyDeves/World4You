@@ -1,4 +1,5 @@
-﻿using System;
+﻿using API.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,24 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API.Data
+namespace API.Models
 {
-    public class Person
+    public class PersonCreate
     {
-        [Key]
+        //[Key]
         public int ID { get; set; }
-      
-        [Required]
+        //[Required]
         public string Name { get; set; }
         public string Title { get; set; }
-        [Required]
+        //[Required]
         public int Age { get; set; }
-        [Required]
         public string Occupation { get; set; }
-        [Required]
-        public Guid OwnerID { get; set; }
         //Add Location
-        [ForeignKey(nameof(Place))]
+        //[ForeignKey(nameof(Place))]
         public virtual Place Place { get; set; }
     }
 }
