@@ -21,6 +21,7 @@ namespace API.Services.ArtifactServices
         {
             var entity = new Artifact()
             {
+                OwnerID = _userID,
                 Name = model.Name,
                 Age = model.Age,
                 Power = model.Power,
@@ -65,6 +66,7 @@ namespace API.Services.ArtifactServices
                 return
                     new ArtifactDetail
                     {
+                        ID = entity.ID,
                         Name = entity.Name,
                         Age = entity.Age,
                         Power = entity.Power,

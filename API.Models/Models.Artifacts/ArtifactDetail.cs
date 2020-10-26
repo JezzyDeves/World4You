@@ -9,6 +9,7 @@ namespace API.Models.Models.Artifacts
 {
     public class ArtifactDetail
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public string Power { get; set; }

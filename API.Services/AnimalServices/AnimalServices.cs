@@ -22,6 +22,7 @@ namespace API.Services.AnimalServices
         {
             var entity = new Animal()
             {
+                OwnerID = _userID,
                 ID = model.ID,
                 Name = model.Name,
                 Species = model.Species,

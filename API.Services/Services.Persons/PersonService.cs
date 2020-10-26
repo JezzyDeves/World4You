@@ -10,91 +10,77 @@ using System.Threading.Tasks;
 
 namespace API.Services.Services.Persons
 {
-    public class  PersonService
+    public class PersonService
     {
         private readonly Guid _userID;
+        private readonly ApplicationDbContext _context = new ApplicationDbContext();
         public PersonService(Guid userID)
         {
             _userID = userID;
         }
         //Create//
-        public bool PersonCreate (PersonCreate model)
+        public bool PersonCreate(PersonCreate model)
         {
             var entity =
                 new Person()
-                {  
-                    //OwnerID = _userID Is this necessary?//
+                {
+                    OwnerID = _userID,
                     Name = model.Name,
                     Title = model.Title,
                     Age = model.Age,
                     Occupation = model.Occupation,
                     PlaceID = model.Place
                 };
-            using (var ctx = new ApplicationDbContext())
-            {
-                ctx.Persons.Add(entity);
-                return ctx.SaveChanges() == 1;
-            }
+            _context.Persons.Add(entity);
+            return _context.SaveChanges() == 1;
         }
         //Get Person//
         public List<PersonListItem> GetPersons()
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query = ctx.Persons
-                    .Where(e => e.OwnerID == _userID)
-                    .Select(e => new PersonListItem
-                    {
-                        PersonID = e.ID,
-                        Name = e.Name
-                    } 
-                    );
-                return query.ToList();
-            }
+            var query = _context.Persons
+                .Where(e => e.OwnerID == _userID)
+                .Select(e => new PersonListItem
+                {
+                    PersonID = e.ID,
+                    Name = e.Name
+                }
+                );
+            return query.ToList();
         }
         //Get Person By Id//
         public PersonDetail GetPersonByID(int id)
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx
-                    .Persons
-                    .Single(e => e.ID == id && e.OwnerID == _userID);
-                return
-                    new PersonDetail
-                    {
-                        ID = entity.ID,
-                        Name = entity.Name,
-                        Title = entity.Title,
-                        Age = entity.Age,
-                        Occupation = entity.Occupation
-                    };
-            }
+            var entity = _context
+                .Persons
+                .Single(e => e.ID == id && e.OwnerID == _userID);
+            return
+                new PersonDetail
+                {
+                    ID = entity.ID,
+                    Name = entity.Name,
+                    Title = entity.Title,
+                    Age = entity.Age,
+                    Occupation = entity.Occupation
+                };
         }//Update//
         public bool PersonUpdate(PersonEdit model)
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx
-                    .Persons
-                    .Single(e => e.ID == model.ID && e.OwnerID == _userID);
-                entity.Name = model.Name;
-                entity.Title = model.Title;
-                entity.Age = model.Age;
-                entity.Occupation = model.Occupation;
-                return ctx.SaveChanges() == 1;
-            }
+            var entity = _context
+                .Persons
+                .Single(e => e.ID == model.ID && e.OwnerID == _userID);
+            entity.Name = model.Name;
+            entity.Title = model.Title;
+            entity.Age = model.Age;
+            entity.Occupation = model.Occupation;
+            return _context.SaveChanges() == 1;
         }
         public bool DeletePerson(int ID)
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx
-                    .Persons
-                    .Single(e => e.ID == ID && e.OwnerID == _userID);
-                ctx.Persons.Remove(entity);
-                return ctx.SaveChanges() == 1;
-            }
+            var entity = _context
+                .Persons
+                .Single(e => e.ID == ID && e.OwnerID == _userID);
+            _context.Persons.Remove(entity);
+            return _context.SaveChanges() == 1;
         }
     }
 }
