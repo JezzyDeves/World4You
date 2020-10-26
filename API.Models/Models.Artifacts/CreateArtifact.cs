@@ -9,13 +9,10 @@ namespace API.Models.Models.Artifacts
 {
     public class CreateArtifact
     {
-        [Required]
         public string Name { get; set; }
-        [Required]
         public int Age { get; set; }
-        [Required]
         public string Power { get; set; }
-        [Required]
         public string Description { get; set; }
+        public int PlaceID { get; set; }
     }
 }

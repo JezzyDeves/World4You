@@ -12,7 +12,7 @@ namespace API.Models
     public class PersonCreate
     {
         //[Key]
-        public int ID { get; set; }
+        //public int ID { get; set; }
         //[Required]
         public string Name { get; set; }
         public string Title { get; set; }
@@ -21,6 +21,6 @@ namespace API.Models
         public string Occupation { get; set; }
         //Add Location
         //[ForeignKey(nameof(Place))]
-        public virtual Place Place { get; set; }
+        public int Place { get; set; }
     }
 }

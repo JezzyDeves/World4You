@@ -27,7 +27,8 @@ namespace API.Services.Services.Persons
                     Name = model.Name,
                     Title = model.Title,
                     Age = model.Age,
-                    Occupation = model.Occupation
+                    Occupation = model.Occupation,
+                    PlaceID = model.Place
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -36,7 +37,7 @@ namespace API.Services.Services.Persons
             }
         }
         //Get Person//
-        public IEnumerable<PersonListItem> GetPersons()
+        public List<PersonListItem> GetPersons()
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -45,9 +46,10 @@ namespace API.Services.Services.Persons
                     .Select(e => new PersonListItem
                     {
                         PersonID = e.ID,
-                        Name = e.Name,} 
+                        Name = e.Name
+                    } 
                     );
-                return query.ToArray();
+                return query.ToList();
             }
         }
         //Get Person By Id//

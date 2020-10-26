@@ -24,6 +24,7 @@ namespace API.Data
         public Guid OwnerID { get; set; }
         //Add Location
         [ForeignKey(nameof(Place))]
+        public int PlaceID { get; set; }
         public virtual Place Place { get; set; }
     }
 }

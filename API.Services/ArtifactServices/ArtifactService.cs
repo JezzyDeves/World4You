@@ -24,7 +24,8 @@ namespace API.Services.ArtifactServices
                 Name = model.Name,
                 Age = model.Age,
                 Power = model.Power,
-                Description = model.Description
+                Description = model.Description,
+                PlaceID = model.PlaceID
             };
 
             using (var ctx = new ApplicationDbContext())
