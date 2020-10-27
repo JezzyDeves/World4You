@@ -29,7 +29,8 @@ namespace API.Services.Services.Persons
                     Title = model.Title,
                     Age = model.Age,
                     Occupation = model.Occupation,
-                    PlaceID = model.Place
+                    PlaceID = model.Place,
+                    EquippedArtifact = model.EquippedArtifact
                 };
             _context.Persons.Add(entity);
             return _context.SaveChanges() == 1;

@@ -22,5 +22,6 @@ namespace API.Models
         //Add Location
         //[ForeignKey(nameof(Place))]
         public int Place { get; set; }
+        public int? EquippedArtifact { get; set; }
     }
 }
