@@ -10,5 +10,6 @@ namespace API.Models.Models.Persons
     {
         public int PersonID { get; set; }
         public string Name { get; set; }
+        public int PlaceID { get; set; }
     }
 }

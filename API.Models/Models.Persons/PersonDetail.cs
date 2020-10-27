@@ -16,6 +16,8 @@ namespace API.Models.Models.Persons
         public int Age { get; set; }
         public string Occupation { get; set; }
         //Add Location
-        public Place Place { get; set; }
+        [ForeignKey(nameof(Place))]
+        public int PlaceID { get; set; }
+        public virtual Place Place { get; set; }
     }
 }
