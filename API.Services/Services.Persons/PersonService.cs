@@ -61,7 +61,9 @@ namespace API.Services.Services.Persons
                     Name = entity.Name,
                     Title = entity.Title,
                     Age = entity.Age,
-                    Occupation = entity.Occupation
+                    Occupation = entity.Occupation,
+                    Place = entity.Place,
+                    Artifact = entity.Artifact
                 };
         }//Update//
         public bool PersonUpdate(PersonEdit model)
