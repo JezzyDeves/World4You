@@ -75,6 +75,7 @@ namespace API.Services.Services.Persons
             entity.Title = model.Title;
             entity.Age = model.Age;
             entity.Occupation = model.Occupation;
+            entity.EquippedArtifact = model.EquippedArtifact;
             return _context.SaveChanges() == 1;
         }
         public bool DeletePerson(int ID)
