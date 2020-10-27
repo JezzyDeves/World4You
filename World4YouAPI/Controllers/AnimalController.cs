@@ -38,5 +38,32 @@ namespace World4YouAPI.Controllers
 
             return Ok();
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            AnimalServices animalService = CreateAnimalService();
+            var person = animalService.GetAnimalByID(id);
+            return Ok(person);
+        }
+        public IHttpActionResult Put(AnimalDetail animal)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var service = CreateAnimalService();
+            if (!service.UpdateAnimalInfo(animal))
+            {
+                return InternalServerError();
+            }
+            return Ok();
+        }
+        public IHttpActionResult Delete(int ID)
+        {
+            var service = CreateAnimalService();
+            if (!service.DeleteAnimal(ID))
+                return InternalServerError();
+            return Ok();
+        }
     }
 }
