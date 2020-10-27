@@ -68,12 +68,12 @@ namespace API.Services.AnimalServices
         //UPDATE ANIMAL INFO
         public bool UpdateAnimalInfo(AnimalDetail editModel)
         {
-            var animalEntity = _context.Animals.Single(p => p.ID == editModel.ID);
+            var animalEntity = _context.Animals.Single(p => p.ID == editModel.ID && p.OwnerID == _userID);
 
             animalEntity.Name = editModel.Name;
             animalEntity.Species = editModel.Species;
             animalEntity.Population = editModel.Population;
-            animalEntity.Place = editModel.Place;
+            animalEntity.PlaceID = editModel.PlaceID;
 
             return _context.SaveChanges() == 1;
         }
