@@ -41,5 +41,32 @@ namespace World4YouAPI.Controllers
 
             return Ok();
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            PlaceServices placeService = CreatePlaceService();
+            var place = placeService.ShowPlacesByID(id);
+            return Ok(place);
+        }
+        public IHttpActionResult Put(PlaceDetail place)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var service = CreatePlaceService();
+            if (!service.ChangePlaceInfo(place))
+            {
+                return InternalServerError();
+            }
+            return Ok();
+        }
+        public IHttpActionResult Delete(int ID)
+        {
+            var service = CreatePlaceService();
+            if (!service.DeleteAPlace(ID))
+                return InternalServerError();
+            return Ok();
+        }
     }
 }

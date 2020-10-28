@@ -16,5 +16,6 @@ namespace API.Models
         public int Age { get; set; }
         public string Occupation { get; set; }
         public int Place { get; set; }
+        public int? EquippedArtifact { get; set; }
     }
 }

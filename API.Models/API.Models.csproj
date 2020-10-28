@@ -86,6 +86,8 @@
   <ItemGroup>
     <Compile Include="Models.Animals\AnimalAdd.cs" />
     <Compile Include="Models.Animals\AnimalDetail.cs" />
+    <Compile Include="Models.Animals\AnimalEdit.cs" />
+    <Compile Include="Models.Artifacts\ArtifactEdit.cs" />
     <Compile Include="Models.Persons\PersonCreate.cs" />
     <Compile Include="Models.Persons\PersonDetail.cs" />
     <Compile Include="Models.Persons\PersonEdit.cs" />

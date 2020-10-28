@@ -1,18 +1,19 @@
-﻿using System;
+﻿using API.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API.Models.Models.Persons
+namespace API.Models.Models.Artifacts
 {
-    public class PersonEdit
+    public class ArtifactEdit
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Title { get; set;}
         public int Age { get; set; }
-        public string Occupation { get; set; }
-        public int? EquippedArtifact { get; set; }
+        public string Power { get; set; }
+        public string Description { get; set; }
+        public int PlaceID { get; set; }
     }
 }

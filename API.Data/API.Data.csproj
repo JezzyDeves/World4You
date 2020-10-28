@@ -87,6 +87,23 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Artifact.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202010271358504_InitialCreate.cs" />
+    <Compile Include="Migrations\202010271358504_InitialCreate.Designer.cs">
+      <DependentUpon>202010271358504_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010271745208_FirstMigration.cs" />
+    <Compile Include="Migrations\202010271745208_FirstMigration.Designer.cs">
+      <DependentUpon>202010271745208_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010271807066_2.cs" />
+    <Compile Include="Migrations\202010271807066_2.Designer.cs">
+      <DependentUpon>202010271807066_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010281735558_Animal.cs" />
+    <Compile Include="Migrations\202010281735558_Animal.Designer.cs">
+      <DependentUpon>202010281735558_Animal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +111,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010271358504_InitialCreate.resx">
+      <DependentUpon>202010271358504_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010271745208_FirstMigration.resx">
+      <DependentUpon>202010271745208_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010271807066_2.resx">
+      <DependentUpon>202010271807066_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010281735558_Animal.resx">
+      <DependentUpon>202010281735558_Animal.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
