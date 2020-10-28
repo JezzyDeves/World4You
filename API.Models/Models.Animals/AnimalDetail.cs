@@ -14,9 +14,6 @@ namespace API.Models.Models.Animals
         public string Name { get; set; }
         public string Species { get; set; }
         public int Population { get; set; }
-
-        [ForeignKey(nameof(Place))]
-        public int PlaceID { get; set; }
         public virtual Place Place { get; set; }
     }
 }
