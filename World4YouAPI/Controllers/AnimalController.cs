@@ -45,7 +45,7 @@ namespace World4YouAPI.Controllers
             var person = animalService.GetAnimalByID(id);
             return Ok(person);
         }
-        public IHttpActionResult Put(AnimalDetail animal)
+        public IHttpActionResult Put(AnimalEdit animal)
         {
             if (!ModelState.IsValid)
             {
