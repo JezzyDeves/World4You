@@ -13,6 +13,5 @@ namespace API.Models.Models.Persons
         public string Title { get; set;}
         public int Age { get; set; }
         public string Occupation { get; set; }
-        public int PlaceID { get; set; }
     }
 }
