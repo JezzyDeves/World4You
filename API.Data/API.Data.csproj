@@ -99,6 +99,10 @@
     <Compile Include="Migrations\202010271807066_2.Designer.cs">
       <DependentUpon>202010271807066_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010281735558_Animal.cs" />
+    <Compile Include="Migrations\202010281735558_Animal.Designer.cs">
+      <DependentUpon>202010281735558_Animal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Place.cs" />
@@ -117,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010271807066_2.resx">
       <DependentUpon>202010271807066_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010281735558_Animal.resx">
+      <DependentUpon>202010281735558_Animal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
