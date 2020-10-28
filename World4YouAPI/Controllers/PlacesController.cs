@@ -42,10 +42,10 @@ namespace World4YouAPI.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Get(string climate)
+        public IHttpActionResult Get(int id)
         {
             PlaceServices placeService = CreatePlaceService();
-            var place = placeService.ShowAllPlacesInClimate(climate);
+            var place = placeService.ShowPlacesByID(id);
             return Ok(place);
         }
         public IHttpActionResult Put(PlaceDetail place)

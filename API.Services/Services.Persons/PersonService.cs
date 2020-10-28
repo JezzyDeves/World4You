@@ -43,7 +43,11 @@ namespace API.Services.Services.Persons
                 .Select(e => new PersonListItem
                 {
                     PersonID = e.ID,
-                    Name = e.Name
+                    Name = e.Name,
+                    Title = e.Title,
+                    Age = e.Age,
+                    Occupation = e.Occupation,
+                    Place = e.Place
                 }
                 );
             return query.ToList();
