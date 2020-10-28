@@ -26,5 +26,9 @@ namespace API.Data
         [ForeignKey(nameof(Place))]
         public int PlaceID { get; set; }
         public virtual Place Place { get; set; }
+        //Add Artifact
+        public int? EquippedArtifact { get; set; }
+        [ForeignKey(nameof(EquippedArtifact))]
+        public virtual Artifact Artifact { get; set; }
     }
 }
