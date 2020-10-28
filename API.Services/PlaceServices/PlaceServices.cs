@@ -49,11 +49,11 @@ namespace API.Services
             return placeList;
         }
 
-        //GET PLACES BY CLIMATE
-        public PlaceDetail ShowAllPlacesInClimate(string climate)
+        //GET PLACES BY ID
+        public PlaceDetail ShowPlacesByID(int id)
         {
-            var placeEntity = _context.Places.Find(climate);
-            var placeDetail = new PlaceDetail
+            var placeEntity = _context.Places.Single(e => e.ID == id);
+            return new PlaceDetail
             {
                 ID = placeEntity.ID,
                 Name = placeEntity.Name,
@@ -61,8 +61,6 @@ namespace API.Services
                 Elevation = placeEntity.Elevation,
                 Climate = placeEntity.Climate
             };
-
-            return placeDetail;
         }
 
         //UPDATE DETAILS ABOUT A PLACE
