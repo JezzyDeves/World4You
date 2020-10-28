@@ -37,15 +37,13 @@ namespace API.Services.AnimalServices
         //READ ALL ENTRIES/GET ALL
         public List<AnimalDetail> GetAnimals()
         {
-            var query =
-                   _context.Animals.Where(e => e.OwnerID == _userID).Select(
-                           e =>
-                               new AnimalDetail()
-                               {
-                                   ID = e.ID,
-                                   Name = e.Name,
-                               }
-                       );
+            var query = _context.Animals.Where(e => e.OwnerID == _userID).Select
+                (e => new AnimalDetail()
+                  {
+                    ID = e.ID,
+                    Name = e.Name,
+                  }
+                );
 
             return query.ToList();
         }
@@ -68,12 +66,12 @@ namespace API.Services.AnimalServices
         //UPDATE ANIMAL INFO
         public bool UpdateAnimalInfo(AnimalDetail editModel)
         {
-            var animalEntity = _context.Animals.Single(p => p.ID == editModel.ID);
+            var animalEntity = _context.Animals.Single(e => e.ID == editModel.ID && e.OwnerID == _userID);
 
             animalEntity.Name = editModel.Name;
             animalEntity.Species = editModel.Species;
             animalEntity.Population = editModel.Population;
-            animalEntity.Place = editModel.Place;
+            animalEntity.PlaceID = editModel.PlaceID;
 
             return _context.SaveChanges() == 1;
         }
@@ -81,7 +79,7 @@ namespace API.Services.AnimalServices
         //DELETE ANIMAL
         public bool DeleteAnimal(int id)
         {
-            var animalEntity = _context.Animals.Single(p => p.ID == id);
+            var animalEntity = _context.Animals.Single(e => e.ID == id);
             _context.Animals.Remove(animalEntity);
 
             return _context.SaveChanges() == 1;
