@@ -10,6 +10,7 @@ namespace API.Services.AnimalServices
 {
     public class AnimalServices
     {
+
         private readonly ApplicationDbContext _context = new ApplicationDbContext();
         private readonly Guid _userID;
         public AnimalServices(Guid userID)
