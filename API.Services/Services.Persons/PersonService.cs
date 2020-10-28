@@ -31,6 +31,7 @@ namespace API.Services.Services.Persons
                     Occupation = model.Occupation,
                     PlaceID = model.Place
                 };
+            
             _context.Persons.Add(entity);
             return _context.SaveChanges() == 1;
         }
