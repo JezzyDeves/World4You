@@ -42,7 +42,10 @@ namespace API.Services.AnimalServices
                   {
                     ID = e.ID,
                     Name = e.Name,
-                  }
+                    Species = e.Species,
+                    Population = e.Population,
+                    Place = e.Place
+                }
                 );
 
             return query.ToList();
