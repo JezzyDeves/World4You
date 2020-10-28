@@ -44,5 +44,26 @@ namespace World4YouAPI.Controllers
 
             return Ok();
         }
+        public IHttpActionResult Put(ArtifactEdit artifact)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateArtifactService();
+
+            if (!service.EditArtifact(artifact))
+                return InternalServerError();
+
+            return Ok();
+        }
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateArtifactService();
+
+            if (!service.DeleteArtifact(id))
+                return InternalServerError();
+            
+            return Ok();
+        }
     }
 }

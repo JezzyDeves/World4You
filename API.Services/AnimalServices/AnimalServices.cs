@@ -27,7 +27,8 @@ namespace API.Services.AnimalServices
                 Name = model.Name,
                 Species = model.Species,
                 Population = model.Population,
-                PlaceID = model.PlaceID
+                PlaceID = model.PlaceID,
+                EquippedArtifact = model.EquippedArtifact
             };
 
             _context.Animals.Add(entity);
@@ -44,7 +45,8 @@ namespace API.Services.AnimalServices
                     Name = e.Name,
                     Species = e.Species,
                     Population = e.Population,
-                    Place = e.Place
+                    Place = e.Place,
+                    Artifact = e.Artifact
                 }
                 );
 
@@ -62,12 +64,13 @@ namespace API.Services.AnimalServices
                     Name = entity.Name,
                     Species = entity.Species,
                     Population = entity.Population,
-                    Place = entity.Place
+                    Place = entity.Place,
+                    Artifact = entity.Artifact
                 };
         }
 
         //UPDATE ANIMAL INFO
-        public bool UpdateAnimalInfo(AnimalDetail editModel)
+        public bool UpdateAnimalInfo(AnimalEdit editModel)
         {
             var animalEntity = _context.Animals.Single(e => e.ID == editModel.ID && e.OwnerID == _userID);
 
@@ -75,6 +78,7 @@ namespace API.Services.AnimalServices
             animalEntity.Species = editModel.Species;
             animalEntity.Population = editModel.Population;
             animalEntity.PlaceID = editModel.PlaceID;
+            animalEntity.EquippedArtifact = editModel.EquippedArtifact;
 
             return _context.SaveChanges() == 1;
         }

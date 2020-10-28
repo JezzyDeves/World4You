@@ -16,5 +16,6 @@ namespace API.Models.Models.Animals
         public int Population { get; set; }
         
         public int PlaceID { get; set; }
+        public int? EquippedArtifact { get; set; }
     }
 }

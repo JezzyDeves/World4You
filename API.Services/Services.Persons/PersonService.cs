@@ -29,7 +29,8 @@ namespace API.Services.Services.Persons
                     Title = model.Title,
                     Age = model.Age,
                     Occupation = model.Occupation,
-                    PlaceID = model.Place
+                    PlaceID = model.Place,
+                    EquippedArtifact = model.EquippedArtifact
                 };
             
             _context.Persons.Add(entity);
@@ -65,7 +66,9 @@ namespace API.Services.Services.Persons
                     Name = entity.Name,
                     Title = entity.Title,
                     Age = entity.Age,
-                    Occupation = entity.Occupation
+                    Occupation = entity.Occupation,
+                    Place = entity.Place,
+                    Artifact = entity.Artifact
                 };
         }//Update//
         public bool PersonUpdate(PersonEdit model)
@@ -77,6 +80,7 @@ namespace API.Services.Services.Persons
             entity.Title = model.Title;
             entity.Age = model.Age;
             entity.Occupation = model.Occupation;
+            entity.EquippedArtifact = model.EquippedArtifact;
             return _context.SaveChanges() == 1;
         }
         public bool DeletePerson(int ID)
