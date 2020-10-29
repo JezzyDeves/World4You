@@ -46,7 +46,8 @@ namespace API.Services.AnimalServices
                     Species = e.Species,
                     Population = e.Population,
                     Place = e.Place,
-                    Artifact = e.Artifact
+                    ArtifactID = e.Artifact.ID,
+                    ArtifactName = e.Artifact.Name
                 }
                 );
 
@@ -65,7 +66,8 @@ namespace API.Services.AnimalServices
                     Species = entity.Species,
                     Population = entity.Population,
                     Place = entity.Place,
-                    Artifact = entity.Artifact
+                    ArtifactID = entity.Artifact.ID,
+                    ArtifactName = entity.Artifact.Name
                 };
         }
 

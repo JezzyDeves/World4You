@@ -17,6 +17,7 @@ namespace API.Models.Models.Persons
         public string Occupation { get; set; }
         //Add Location
         public Place Place { get; set; }
-        public Artifact Artifact { get; set; }
+        public int ArtifactID { get; set; }
+        public string ArtifactName { get; set; }
     }
 }
