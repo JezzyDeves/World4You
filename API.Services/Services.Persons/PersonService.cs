@@ -32,6 +32,7 @@ namespace API.Services.Services.Persons
                     PlaceID = model.Place,
                     EquippedArtifact = model.EquippedArtifact
                 };
+            
             _context.Persons.Add(entity);
             return _context.SaveChanges() == 1;
         }
@@ -67,7 +68,8 @@ namespace API.Services.Services.Persons
                     Age = entity.Age,
                     Occupation = entity.Occupation,
                     Place = entity.Place,
-                    Artifact = entity.Artifact
+                    ArtifactID = entity.Artifact.ID,
+                    ArtifactName = entity.Artifact.Name
                 };
         }//Update//
         public bool PersonUpdate(PersonEdit model)
