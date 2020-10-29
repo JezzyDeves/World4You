@@ -97,6 +97,8 @@
     <Compile Include="PlaceModels\PlaceCreate.cs" />
     <Compile Include="Models.Artifacts\ArtifactListItem.cs" />
     <Compile Include="Models.Artifacts\CreateArtifact.cs" />
+    <Compile Include="PlaceModels\PlaceEdit.cs" />
+    <Compile Include="PlaceModels\PlaceListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

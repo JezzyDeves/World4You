@@ -34,10 +34,10 @@ namespace API.Services
         }
 
         //GET ALL PLACES
-        public List<PlaceDetail> ShowAllPlaces()
+        public List<PlaceListItem> ShowAllPlaces()
         {
             var placeEntities = _context.Places.ToList();
-            var placeList = placeEntities.Select(p => new PlaceDetail
+            var placeList = placeEntities.Select(p => new PlaceListItem
             {
                 ID = p.ID,
                 Name = p.Name,
@@ -64,14 +64,14 @@ namespace API.Services
         }
 
         //UPDATE DETAILS ABOUT A PLACE
-        public bool ChangePlaceInfo(PlaceDetail placeDetail)
+        public bool ChangePlaceInfo(PlaceEdit placeEdit)
         {
-                var placeEntity = _context.Places.Single(p => p.ID == placeDetail.ID);
+                var placeEntity = _context.Places.Single(p => p.ID == placeEdit.ID);
 
-                placeEntity.Name = placeDetail.Name;
-                placeEntity.Position = placeDetail.Position;
-                placeEntity.Elevation = placeDetail.Elevation;
-                placeEntity.Climate = placeDetail.Climate;
+                placeEntity.Name = placeEdit.Name;
+                placeEntity.Position = placeEdit.Position;
+                placeEntity.Elevation = placeEdit.Elevation;
+                placeEntity.Climate = placeEdit.Climate;
 
                 return _context.SaveChanges() == 1;
         }

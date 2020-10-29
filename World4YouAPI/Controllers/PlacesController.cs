@@ -48,7 +48,7 @@ namespace World4YouAPI.Controllers
             var place = placeService.ShowPlacesByID(id);
             return Ok(place);
         }
-        public IHttpActionResult Put(PlaceDetail place)
+        public IHttpActionResult Put(PlaceEdit place)
         {
             if (!ModelState.IsValid)
             {
