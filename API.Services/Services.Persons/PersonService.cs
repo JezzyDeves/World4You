@@ -32,6 +32,7 @@ namespace API.Services.Services.Persons
                     PlaceID = model.Place,
                     EquippedArtifact = model.EquippedArtifact
                 };
+            
             _context.Persons.Add(entity);
             return _context.SaveChanges() == 1;
         }
