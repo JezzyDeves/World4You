@@ -16,7 +16,7 @@ namespace API.Models.Models.Animals
         public int Population { get; set; }
         public int PlaceID { get; set; }
         public Place Place { get; set; }
-        public int ArtifactID { get; set; }
+        public int? ArtifactID { get; set; }
         public string ArtifactName { get; set; }
     }
 }
