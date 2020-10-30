@@ -58,6 +58,21 @@ namespace API.Services.Services.Persons
             var entity = _context
                 .Persons
                 .Single(e => e.ID == id && e.OwnerID == _userID);
+            if (entity.EquippedArtifact != null)
+            {
+                return
+                    new PersonDetail
+                    {
+                        ID = entity.ID,
+                        Name = entity.Name,
+                        Title = entity.Title,
+                        Age = entity.Age,
+                        Occupation = entity.Occupation,
+                        Place = entity.Place,
+                        ArtifactID = entity.Artifact.ID,
+                        ArtifactName = entity.Artifact.Name
+                    };
+            }
             return
                 new PersonDetail
                 {
@@ -67,8 +82,6 @@ namespace API.Services.Services.Persons
                     Age = entity.Age,
                     Occupation = entity.Occupation,
                     Place = entity.Place,
-                    ArtifactID = entity.Artifact.ID,
-                    ArtifactName = entity.Artifact.Name
                 };
         }//Update//
         public bool PersonUpdate(PersonEdit model)
