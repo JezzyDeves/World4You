@@ -45,9 +45,7 @@ namespace API.Services.AnimalServices
                     Name = e.Name,
                     Species = e.Species,
                     Population = e.Population,
-                    Place = e.Place,
-                    ArtifactID = e.Artifact.ID,
-                    ArtifactName = e.Artifact.Name
+                    Place = e.Place
                 }
                 );
 
