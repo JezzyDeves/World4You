@@ -45,9 +45,7 @@ namespace API.Services.AnimalServices
                     Name = e.Name,
                     Species = e.Species,
                     Population = e.Population,
-                    Place = e.Place,
-                    ArtifactID = e.Artifact.ID,
-                    ArtifactName = e.Artifact.Name
+                    Place = e.Place
                 }
                 );
 
@@ -58,6 +56,20 @@ namespace API.Services.AnimalServices
         public AnimalDetail GetAnimalByID(int id)
         {
             var entity = _context.Animals.Single(e => e.ID == id && e.OwnerID == _userID);
+
+            if(entity.EquippedArtifact != null)
+            {
+                return
+                    new AnimalDetail
+                    {
+                        Name = entity.Name,
+                        Species = entity.Species,
+                        Population = entity.Population,
+                        Place = entity.Place,
+                        ArtifactID = entity.Artifact.ID,
+                        ArtifactName = entity.Artifact.Name
+                    };
+            }
            
             return
                 new AnimalDetail
@@ -65,9 +77,7 @@ namespace API.Services.AnimalServices
                     Name = entity.Name,
                     Species = entity.Species,
                     Population = entity.Population,
-                    Place = entity.Place,
-                    ArtifactID = entity.Artifact.ID,
-                    ArtifactName = entity.Artifact.Name
+                    Place = entity.Place
                 };
         }
 
