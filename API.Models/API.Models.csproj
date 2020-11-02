@@ -84,11 +84,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models.Animals\AnimalAdd.cs" />
+    <Compile Include="Models.Animals\AnimalDetail.cs" />
+    <Compile Include="Models.Animals\AnimalEdit.cs" />
+    <Compile Include="Models.Artifacts\ArtifactEdit.cs" />
+    <Compile Include="Models.Persons\PersonCreate.cs" />
+    <Compile Include="Models.Persons\PersonDetail.cs" />
+    <Compile Include="Models.Persons\PersonEdit.cs" />
+    <Compile Include="Models.Persons\PersonListItem.cs" />
+    <Compile Include="Models.Artifacts\ArtifactDetail.cs" />
+    <Compile Include="PlaceModels\PlaceDetail.cs" />
+    <Compile Include="PlaceModels\PlaceCreate.cs" />
+    <Compile Include="Models.Artifacts\ArtifactListItem.cs" />
+    <Compile Include="Models.Artifacts\CreateArtifact.cs" />
+    <Compile Include="PlaceModels\PlaceEdit.cs" />
+    <Compile Include="PlaceModels\PlaceListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API.Data\API.Data.csproj">
+      <Project>{2E4FAB6C-9FE5-4681-9BE0-9C71977F436D}</Project>
+      <Name>API.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
