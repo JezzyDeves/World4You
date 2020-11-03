@@ -3,7 +3,7 @@ World4You is a worldbuilding tool created [Jonathon](https://github.com/JezzyDev
 Anything can be tied to a place so you can keep track of where things are in your world.
 
 # Walkthrough
-This is a basic tutorial on how to use this API with Postman. An important thing to remember is that currently if you delete an entity that is tied to another entity (like an artifact that a person uses) it will cause errors.
+This is a basic tutorial on how to use this API with Postman. An important thing to remember is that currently if you delete an entity that is tied to another entity (like an artifact that a person uses) **it will cause errors.**
 ## Step One
 Create a user account using the Register endpoint and copy the token into the authorization header in Postman
 ## Step Two
