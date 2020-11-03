@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalServices\AnimalServices.cs" />
+    <Compile Include="LocationServices.cs" />
     <Compile Include="PlaceServices\PlaceServices.cs" />
     <Compile Include="ArtifactServices\ArtifactService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
