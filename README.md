@@ -10,3 +10,33 @@ Create a user account using the Register endpoint and copy the token into the au
 Create a place. You need a place in order to create any other objects. This also means you can't delete a place that is attached to a person.
 ## Step Three
 Create any other object. You can attach an artifact to an animal or person but you do not have to.
+## Documentation and Planning
+
+- The following link is to our API Documentation and quick link to run in Postman:
+https://web.postman.co/collections/13066114-bf181acd-9860-42cc-a7d7-31cc595b54b7?version=latest&workspace=193a98f4-f801-4931-86c3-23e5c2f027e0
+
+- Link to our database wireframing diagram:
+https://dbdiagram.io
+
+- Link to our Project Planning document titled Galifournia
+https://docs.google.com/document/d/1TigdUKKI0JSxvOU756qDP-eUT-ePfE2I4sv69dscwwo/edit
+
+- Link to our Google excel sheet used for planning:
+https://docs.google.com/spreadsheets/d/1qJV4wjHliaUc0M_5Gej2jWAoeMws4Q28/edit#gid=1698923123
+
+- Link to our Trello Kanban Board
+https://trello.com/b/QOHcJ3Cv/galafourniaapi
+
+
+## Sources to Websites used:
+- Link to Data Annotations - ForeignKey Attribute in EF 6
+https://www.entityframeworktutorial.net/code-first/foreignkey-dataannotations-attribute-in-code-first.aspx
+- Link to connect to outside db https://www.youtube.com/watch?v=Et2khGnrIqc&t=4294s
+
+
+## Importing Seed Database
+A reference for connecting .NET Framework to outside Database
+https://www.youtube.com/watch?reload=9&v=weE1CwfS9rI
+
+## Contributors
+Made by Jonathon Rivers, Matthew "Tyler" Hougland, Maureen McCormick and Tessa Strube
