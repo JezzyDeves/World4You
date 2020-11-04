@@ -13,6 +13,11 @@ Create a place. You need a place in order to create any other objects. This also
 ## Step Three
 Create any other object. You can attach an artifact to an animal or person but you do not have to.
 
+## Testing
+We used Postman to test our final project.  You can run the tests here
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d9f75d286cd718a369fa)
+
+
 ## Documentation and Planning
 
 - The following link is to our API Documentation and quick link to run in Postman:
