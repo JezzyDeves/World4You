@@ -1,7 +1,9 @@
 # World4You
 World4You is a worldbuilding tool created [Jonathon](https://github.com/JezzyDeves), [Tessa](https://github.com/tessstrube), [Maureen](https://github.com/McCormickPMP), and [Tyler](https://github.com/DocMTyler). It is an opensource solution for worldbuilding. It allows you to create People, Animals, Artifacts, and Places.
 Anything can be tied to a place so you can keep track of where things are in your world.
-
+# Important Notes
+- If you delete an entity that is tied to another entity (like an artifact that a person uses) **it will cause errors.**
+- Deleting a place will delete anything that belongs to that place
 # Walkthrough
 This is a basic tutorial on how to use this API with Postman. An important thing to remember is that currently if you delete an entity that is tied to another entity (like an artifact that a person uses) **it will cause errors.**
 ## Step One
