@@ -10,3 +10,7 @@ Create a user account using the Register endpoint and copy the token into the au
 Create a place. You need a place in order to create any other objects. This also means you can't delete a place that is attached to a person.
 ## Step Three
 Create any other object. You can attach an artifact to an animal or person but you do not have to.
+
+
+## Run in Postman
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/016bab16462b24aaa534)
