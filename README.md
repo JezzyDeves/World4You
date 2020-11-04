@@ -38,6 +38,3 @@ https://www.entityframeworktutorial.net/code-first/foreignkey-dataannotations-at
 ## Importing Seed Database
 A reference for connecting .NET Framework to outside Database
 https://www.youtube.com/watch?reload=9&v=weE1CwfS9rI
-
-## Contributors
-Made by Jonathon Rivers, Matthew "Tyler" Hougland, Maureen McCormick and Tessa Strube
